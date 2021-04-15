@@ -5,9 +5,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  @override
   Widget build(BuildContext ctx) {
     return MaterialApp(
-      home: Text('Test widget'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("First Title"),
+          backgroundColor: Colors.green,
+        ),
+        body: Center(
+          child: Text("Lets do something crazy"),
+        ),
+      ),
     );
   }
 }
