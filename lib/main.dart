@@ -5,6 +5,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  void onPresshandler() {
+    print("Choice Selected");
+  }
+
   @override
   Widget build(BuildContext ctx) {
     return MaterialApp(
@@ -13,8 +17,15 @@ class MyApp extends StatelessWidget {
           title: Text("First Title"),
           backgroundColor: Colors.green,
         ),
-        body: Center(
-          child: Text("Lets do something crazy"),
+        body: Column(
+          children: [
+            Text("Question Goes Here"),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
+          ],
         ),
       ),
     );
