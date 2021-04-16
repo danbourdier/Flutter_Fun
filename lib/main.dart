@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
     'Whatcha think about tomatoes?',
     'Whatcha think about pineapples?'
   ];
-
+  // need an algorithm to handle the boundary of traversing questions
   void onPresshandler() {
     setState(() {
       this._currentQuestionIndex++;
@@ -38,7 +38,8 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text("${this._currentQuestionIndex}"),
+            // Text("${this._currentQuestionIndex}"),
+            QuestionWidget(ourQuestions[this._currentQuestionIndex]),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
