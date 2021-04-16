@@ -10,8 +10,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int _clickCounter = 0;
+
   void onPresshandler() {
-    print("Choice Selected");
+    setState(() {
+      this._clickCounter++;
+    });
   }
 
   @override
@@ -24,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text("Question Goes Here"),
+            Text("${this._clickCounter}"),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
