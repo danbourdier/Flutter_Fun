@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './question_widget.dart';
 
 void main() {
   runApp(new MyApp());
@@ -6,15 +7,18 @@ void main() {
 
 class MyApp extends StatefulWidget {
   @override
+  /* This is saying we are creating an override of #createState that
+    returns an instance of our state.
+  */
   _MyAppState createState() => new _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  int _clickCounter = 0;
+  int _currentQuestionIndex = 0;
 
   void onPresshandler() {
     setState(() {
-      this._clickCounter++;
+      this._currentQuestionIndex++;
     });
   }
 
@@ -28,7 +32,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text("${this._clickCounter}"),
+            Text("${this._currentQuestionIndex}"),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
             ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
