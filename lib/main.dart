@@ -15,6 +15,12 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _currentQuestionIndex = 0;
+  List<String> ourQuestions = [
+    'Whatcha think about apples?',
+    'Whatcha think about pears?',
+    'Whatcha think about tomatoes?',
+    'Whatcha think about pineapples?'
+  ];
 
   void onPresshandler() {
     setState(() {
