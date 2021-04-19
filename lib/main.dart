@@ -37,22 +37,27 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext ctx) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("First Title"),
-          backgroundColor: Colors.green,
-        ),
-        body: Column(
-          children: [
-            QuestionWidget(
-                ourQuestions[questionIndexHelper(this._currentQuestionIndex)]),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Yes")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("No")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Maybe")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("I'm Conflicted!")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("All The Above!")),
-          ],
-        ),
-      ),
+          appBar: AppBar(
+            title: Text("Super Fun Questionnaire"),
+            backgroundColor: Colors.green,
+          ),
+          body: Center(
+              child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 100.0),
+            child: Column(
+              children: [
+                QuestionWidget(ourQuestions[
+                    questionIndexHelper(this._currentQuestionIndex)]),
+                ElevatedButton(onPressed: onPresshandler, child: Text("Yes")),
+                ElevatedButton(onPressed: onPresshandler, child: Text("No")),
+                ElevatedButton(onPressed: onPresshandler, child: Text("Maybe")),
+                ElevatedButton(
+                    onPressed: onPresshandler, child: Text("I'm Conflicted!")),
+                ElevatedButton(
+                    onPressed: onPresshandler, child: Text("All The Above!")),
+              ],
+            ),
+          ))),
     );
   }
 }
