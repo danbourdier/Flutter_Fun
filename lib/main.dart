@@ -22,11 +22,11 @@ class _MyAppState extends State<MyApp> {
     'Whatcha think about tomatoes?',
     'Whatcha think about pineapples?'
   ];
-  // need an algorithm to handle the boundary of traversing questions
+  // This returns an idx within ourQuestions' range
   int questionIndexHelper(int idx) {
     return idx % ourQuestions.length;
   }
-
+  // This is our on press event handler
   void onPresshandler() {
     setState(() {
       this._currentQuestionIndex++;
