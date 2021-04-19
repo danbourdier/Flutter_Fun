@@ -13,6 +13,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => new _MyAppState();
 }
 
+/* Below says we access State that belongs to the above subclass*/
 class _MyAppState extends State<MyApp> {
   int _currentQuestionIndex = 0;
   List<String> ourQuestions = [
@@ -44,11 +45,11 @@ class _MyAppState extends State<MyApp> {
           children: [
             QuestionWidget(
                 ourQuestions[questionIndexHelper(this._currentQuestionIndex)]),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
-            ElevatedButton(onPressed: onPresshandler, child: Text("Choose me")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Yes")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("No")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("Maybe")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("I'm Conflicted!")),
+            ElevatedButton(onPressed: onPresshandler, child: Text("All The Above!")),
           ],
         ),
       ),
